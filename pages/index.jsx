@@ -1,65 +1,68 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Image from 'next/image';
+import styled from 'styled-components';
+import HeroVideo from '../components/HeroVideo';
+
+const StyledBg = styled.div`
+  --first:#F87977;
+  --second:#B80003;
+  background-image: linear-gradient(to bottom right, var(--first), var(--second));
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 3rem;
+  .hero-img {
+    padding: 2rem;
+    width: 35vw;
+    margin: auto;
+  }
+  .title {
+    --spacing: 1.5rem;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 30vh;
+    color: var(--white);
+    text-align: center;
+    h1 {
+      margin: 0;
+      line-height: 10rem;
+      font-weight: 200;
+      font-size: 12rem;
+      letter-spacing: var(--spacing);
+    }
+    h2 {
+      margin: 0;
+      line-height: 4rem;
+      font-weight: 200;
+      font-size: 4rem;
+      letter-spacing: var(--spacing);
+    }
+    button{
+      margin-top: 2rem;
+      margin-right: var(--spacing);
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+`;
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+    <StyledBg>
+      {/* <HeroVideo /> */}
+      <div className='title'>
+        <h1>ADRIAN</h1>
+        <h2>·x·</h2>
+        <h1>SUN</h1>
+        <button>resumé</button>
+      </div>
+      <div className='hero-img'>
+        <Image
+          src='/../public/assets/images/kpop_dude_s.png'
+          width='613'
+          height='1132'
+          layout='responsive'
+        />
+      </div>
+    </StyledBg>
+  );
 }

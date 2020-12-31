@@ -5,12 +5,16 @@ const GlobalStyles = createGlobalStyle`
     --red: #FF4949;
     --black: #2E2E2E;
     --yellow: #ffc600;
-    --white: #fff;
+    --white: #fbf5f3;
     --grey: #efefef;
     --darkGrey: #909090;
   }
 
+
   html, body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height:100%;
+    width:100%;
   }
 
   html {
@@ -33,6 +37,11 @@ const GlobalStyles = createGlobalStyle`
   button {
     border-radius: 2px;
     cursor: pointer;
+    color: var(--white);
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid var(--white);
+    padding: .5rem 1rem;
   }
 
   img {
