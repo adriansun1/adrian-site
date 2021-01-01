@@ -12,7 +12,6 @@ const GlobalStyles = createGlobalStyle`
 
 
   html, body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     height:100%;
     width:100%;
   }
@@ -39,9 +38,13 @@ const GlobalStyles = createGlobalStyle`
     cursor: pointer;
     color: var(--white);
     text-decoration: none;
-    background: transparent;
+    background-color: transparent;
     border: 1px solid var(--white);
     padding: .5rem 1rem;
+    &:hover {
+      color: var(--black);
+      background-color: var(--white);
+    }
   }
 
   img {

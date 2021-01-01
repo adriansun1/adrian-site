@@ -1,32 +1,37 @@
-import Document from "next/document";
-import {ServerStyleSheet} from "styled-components";
+import Document, { Head, Main, NextScript } from 'next/document';
+// Import styled components ServerStyleSheet
+import { ServerStyleSheet } from 'styled-components';
 
-// code to get styled components working 
-// https://www.smashingmagazine.com/2020/09/comparison-styling-methods-next-js/
 export default class MyDocument extends Document {
-  static async getInitialProps(ctx) {
+  static getInitialProps({ renderPage }) {
     const sheet = new ServerStyleSheet();
-    const originalRenderPage = ctx.renderPage;
 
-    try {
-      ctx.renderPage = () =>
-        originalRenderPage({
-          enhanceApp: (App) => (props) =>
-            sheet.collectStyles(<App {...props} />),
-        });
+    const page = renderPage((App) => (props) =>
+      sheet.collectStyles(<App {...props} />)
+    );
 
-      const initialProps = await Document.getInitialProps(ctx);
-      return {
-        ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-            {sheet.getStyleElement()}
-          </>
-        ),
-      };
-    } finally {
-      sheet.seal();
-    }
+    const styleTags = sheet.getStyleElement();
+
+    return { ...page, styleTags };
+  }
+
+  render() {
+    return (
+      <html>
+        <style>
+          @import
+          url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&family=Roboto:wght@100;300&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&family=Titillium+Web:wght@200&family=Work+Sans:wght@100;200&display=swap');
+        </style>
+
+        <Head>
+          <title>My page</title>
+          {this.props.styleTags}
+        </Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </html>
+    );
   }
 }
