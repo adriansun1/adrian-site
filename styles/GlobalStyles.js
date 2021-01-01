@@ -1,15 +1,20 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
   :root {
-    --red: #FF4949;
-    --black: #2E2E2E;
-    --yellow: #ffc600;
+    --maroon: #b80003;
+    --black: #22181C2;
+    --pink: #f87977;
     --white: #fbf5f3;
     --grey: #efefef;
     --darkGrey: #909090;
+    --purple: #856084;
+    --bgGradient: linear-gradient(
+    to bottom right,
+    var(--pink),
+    var(--maroon)
+  );
   }
-
 
   html, body{
     height:100%;
@@ -50,6 +55,6 @@ const GlobalStyles = createGlobalStyle`
   img {
     max-width: 100%;
   }
-`
+`;
 
-export default GlobalStyles
+export default GlobalStyles;
