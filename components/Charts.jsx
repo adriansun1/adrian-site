@@ -12,7 +12,7 @@ const horizontalOptions = {
   options: {
     title: {
       display: true,
-      scaleFontSize: 30,
+      fontSize: 25,
       text: "Things I'm interested in",
     },
     responsive: true,
@@ -64,7 +64,7 @@ const verticalOptions = {
   options: {
     title: {
       display: true,
-      scaleFontSize: 25,
+      fontSize: 15,
       text: "Things I'm interested in",
     },
     responsive: true,

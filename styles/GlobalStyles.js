@@ -8,6 +8,7 @@ const GlobalStyles = createGlobalStyle`
     --white: #fbf5f3;
     --grey: #efefef;
     --darkGrey: #909090;
+    --orange: #F5403D;
     --purple: #856084;
     --bgGradient: linear-gradient(
     to bottom right,
