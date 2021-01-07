@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "babel-plugin-styled-components": "^1.12.0",
+    "chart.js": "^2.9.4",
+    "chartjs-plugin-datalabels": "^0.7.0",
     "next": "10.0.4",
     "normalize.css": "^8.0.1",
     "react": "17.0.1",
