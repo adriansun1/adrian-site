@@ -1,5 +1,8 @@
+import React, { useEffect, useRef, useState } from 'react';
 import Charts from './Charts';
 import styled from 'styled-components';
+import useScrollPosition from '../utils/hooks/useScrollPosition';
+import animations from '../styles/Animations.module.css';
 
 const dataset = [
   {
@@ -51,26 +54,41 @@ const dataset = [
 
 const StyledWrapper = styled.div`
   height: 100vh;
+  min-height: 750px;
   h3 {
     padding: 3rem;
   }
   .chartContainer {
+    margin-top: 2rem;
     height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 2s;
   }
 `;
 
 export default function InterestChart() {
+  const { scrollPositionBottom } = useScrollPosition();
+  const [scrollGoal, setScrollGoal] = useState(0);
+  const divRef = useRef(null);
+
+  useEffect(() => {
+    setScrollGoal(divRef.current.offsetTop);
+  }, []);
+
   return (
-    <StyledWrapper>
-      <h3>
+    <StyledWrapper ref={divRef}>
+      <h3 className={animations.fadeIn}>
         This is my personal site, I use it to keep track the stuff I care about:
       </h3>
-      <div className='chartContainer'>
-        <Charts title='Things I care about' dataset={dataset} />
-      </div>
+      {scrollPositionBottom > scrollGoal ? (
+        <div className={`chartContainer ${animations.fadeIn}`}>
+          <Charts title='Things I care about' dataset={dataset} />
+        </div>
+      ) : (
+        <></>
+      )}
     </StyledWrapper>
   );
 }

@@ -117,6 +117,7 @@ const StyledWrapper = styled.div`
   width: 90vw;
   height: 100%;
   margin: auto;
+  max-width: 1200px;
 
   @media (max-width: 1000px) {
     width: 100%;
@@ -126,6 +127,7 @@ const StyledWrapper = styled.div`
 
 let timeout;
 export default function Charts({ dataset }) {
+  const changeWidth = 850;
   const { width } = useWindowDimensions();
   const [delayWidth, setDelayWidth] = useState();
   const [chartInstance, setChartInstance] = useState(null);
@@ -133,7 +135,7 @@ export default function Charts({ dataset }) {
 
   function drawChart() {
     if (!width) return;
-    const options = width > 600 ? horizontalOptions : verticalOptions;
+    const options = width > changeWidth ? horizontalOptions : verticalOptions;
     setChartInstance(
       new Chart(chartRef.current, {
         data: generateChartData(dataset),

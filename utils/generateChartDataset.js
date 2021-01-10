@@ -40,7 +40,7 @@ export default function generateChartData(dataset) {
     data.backgroundColor = [];
     output.labels.forEach((_, index) => {
       data.backgroundColor.push(
-        `rgba(${colors[setIndex % colors.length]}, 0.6)`
+        `rgba(${colors[setIndex % colors.length]}, 0.7)`
       );
     });
   });
