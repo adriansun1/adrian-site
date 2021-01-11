@@ -6,6 +6,12 @@ const StyledWrapper = styled.div`
   --size: 100px;
   height: 0px;
   position: relative;
+  h3 {
+    font-weight: 400;
+  }
+  h5 {
+    font-weight: 300;
+  }
   .image-group {
     display: flex;
     gap: 2rem;
@@ -31,7 +37,7 @@ const StyledWrapper = styled.div`
     .inner-wrapper {
       flex-direction: column;
       align-items: flex-end;
-    top: -${({ size }) => size + 100}px;
+      top: -${({ size }) => size + 100}px;
     }
   }
 `;
