@@ -5,7 +5,6 @@ import ChartDataLabels from 'chartjs-plugin-datalabels';
 import useWindowDimensions from '../utils/hooks/useWindowDimensions';
 import generateChartData from '../utils/generateChartDataset';
 
-
 const horizontalOptions = {
   type: 'horizontalBar',
   plugins: [ChartDataLabels],
@@ -13,7 +12,10 @@ const horizontalOptions = {
     title: {
       display: true,
       fontSize: 25,
-      text: "Things I'm interested in",
+      text: 'placeholder',
+    },
+    tooltips: {
+      enabled: false,
     },
     responsive: true,
     dataset: {
@@ -27,7 +29,7 @@ const horizontalOptions = {
           ticks: {
             scaleFontSize: 20,
             beginAtZero: true,
-            max: 100,
+            max: 10,
             min: 0,
             stepSize: 20,
           },
@@ -49,7 +51,6 @@ const horizontalOptions = {
         color: 'rgb(255,255,255)',
         anchor: 'end',
         align: 'left',
-        formatter: Math.round,
         font: {
           weight: 'bold',
         },
@@ -65,7 +66,10 @@ const verticalOptions = {
     title: {
       display: true,
       fontSize: 15,
-      text: "Things I'm interested in",
+      text: 'placeholder',
+    },
+    tooltips: {
+      enabled: false,
     },
     responsive: true,
     maintainAspectRatio: false,
@@ -81,7 +85,7 @@ const verticalOptions = {
           ticks: {
             scaleFontSize: 20,
             beginAtZero: true,
-            max: 100,
+            max: 10,
             min: 0,
             stepSize: 20,
           },
@@ -107,7 +111,6 @@ const verticalOptions = {
         color: 'rgb(255,255,255)',
         anchor: 'end',
         align: 'bottom',
-        formatter: Math.round,
       },
     },
   },
@@ -126,8 +129,8 @@ const StyledWrapper = styled.div`
 `;
 
 let timeout;
-export default function Charts({ dataset }) {
-  const changeWidth = 850;
+export default function Charts({ dataset, title, propOptions }) {
+  const changeWidth = 1000;
   const { width } = useWindowDimensions();
   const [delayWidth, setDelayWidth] = useState();
   const [chartInstance, setChartInstance] = useState(null);
@@ -136,9 +139,18 @@ export default function Charts({ dataset }) {
   function drawChart() {
     if (!width) return;
     const options = width > changeWidth ? horizontalOptions : verticalOptions;
+    options.options.title.text = title;
+    options.options.onHover = function (event) {
+      event.target.style.cursor = 'default';
+    };
+    options.options.legend = {
+      onHover: function (event, legendItem) {
+        chartRef.current.style.cursor = 'pointer';
+      },
+    };
     setChartInstance(
       new Chart(chartRef.current, {
-        data: generateChartData(dataset),
+        data: generateChartData(dataset, propOptions),
         ...options,
       })
     );

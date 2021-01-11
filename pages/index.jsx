@@ -26,10 +26,10 @@ export default function Home() {
       <Family/>
       <About/>
       <InterestChart/>
-      <StyledWrapper>
+      {/* <StyledWrapper>
         <h1>Since you're here, why not check out some projects?</h1>
           <ProjectSlider/>
-      </StyledWrapper>
+      </StyledWrapper> */}
     </div>
   );
 }

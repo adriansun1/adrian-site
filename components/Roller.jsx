@@ -36,6 +36,7 @@ const StyledWrapper = styled.div`
       padding-top: 5vh;
       padding-right: 3rem;
       h1 {
+        margin:0;
         text-align: right;
         max-width: 500px;
       }
@@ -61,10 +62,7 @@ export default function Roller() {
             <h1>Portland, Oregon</h1>
           </li>
           <li className='strike'>
-            <h1>Venice, CA</h1>
-          </li>
-          <li className='strike'>
-            <h1>Diamond Bar, CA</h1>
+            <h1>Los Angeles, CA</h1>
           </li>
         </ul>
       </div>

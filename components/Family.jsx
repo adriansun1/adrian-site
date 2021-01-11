@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import Fade from 'react-reveal/Fade'
 
 const StyledWrapper = styled.div`
   --size: 100px;
@@ -47,6 +48,7 @@ export default function About() {
     <StyledWrapper size={100}>
       <div className='inner-wrapper'>
         <h3>with the family:</h3>
+        <Fade right>
         <div className='image-group'>
           <div>
             <Image
@@ -76,6 +78,7 @@ export default function About() {
             <h5>Moo-moo</h5>
           </div>
         </div>
+</Fade>
       </div>
     </StyledWrapper>
   );

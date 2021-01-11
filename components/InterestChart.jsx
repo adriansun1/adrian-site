@@ -1,62 +1,67 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React from 'react';
 import Charts from './Charts';
 import styled from 'styled-components';
-import useScrollPosition from '../utils/hooks/useScrollPosition';
-import animations from '../styles/Animations.module.css';
+import Fade from 'react-reveal/Fade';
 
 const dataset = [
   {
     label: 'Coding',
-    interest: 100,
-    proficiency: 80,
+    interest: 10,
+    proficiency: 8,
   },
   {
     label: 'Cooking',
-    interest: 100,
-    proficiency: 90,
+    interest: 10,
+    proficiency: 9.5,
   },
   {
     label: 'Economics',
-    interest: 90,
-    proficiency: 60,
+    interest: 9,
+    proficiency: 6,
   },
   {
     label: 'Adventure Cats',
-    interest: 70,
-    proficiency: 50,
+    interest: 7,
+    proficiency: 4,
   },
   {
     label: 'Fitness',
-    interest: 80,
-    proficiency: 80,
+    interest: 8,
+    proficiency: 8,
   },
   {
     label: 'E-Skateboard',
-    interest: 70,
-    proficiency: 80,
+    interest: 7,
+    proficiency: 8,
   },
   {
     label: 'Combat Sports',
-    interest: 60,
-    proficiency: 40,
+    interest: 6,
+    proficiency: 4,
   },
   {
     label: 'This Website',
-    interest: 50,
-    proficiency: 50,
+    interest: 5,
+    proficiency: 5,
   },
   {
     label: 'Gardening',
-    interest: 10,
-    proficiency: 3,
+    interest: 1,
+    proficiency: 0.5,
   },
 ];
 
 const StyledWrapper = styled.div`
+  position: relative;
+  margin-top: 1rem;
   height: 100vh;
   min-height: 750px;
-  h3 {
-    padding: 3rem;
+  max-width: 80%;
+  margin: auto;
+  h2 {
+    font-weight: 300;
+    padding: 0;
+    padding-top: 3rem;
   }
   .chartContainer {
     margin-top: 2rem;
@@ -66,29 +71,29 @@ const StyledWrapper = styled.div`
     align-items: center;
     transition: all 2s;
   }
+  @media (max-width: 1000px) {
+    margin-top: 10rem;
+  }
 `;
 
 export default function InterestChart() {
-  const { scrollPositionBottom } = useScrollPosition();
-  const [scrollGoal, setScrollGoal] = useState(0);
-  const divRef = useRef(null);
-
-  useEffect(() => {
-    setScrollGoal(divRef.current.offsetTop);
-  }, []);
-
   return (
-    <StyledWrapper ref={divRef}>
-      <h3 className={animations.fadeIn}>
-        This is my personal site, I use it to keep track the stuff I care about:
-      </h3>
-      {scrollPositionBottom > scrollGoal ? (
-        <div className={`chartContainer ${animations.fadeIn}`}>
-          <Charts title='Things I care about' dataset={dataset} />
+    <StyledWrapper>
+      <Fade>
+        <h2>
+          This is my personal site, I use it to keep track the stuff I care
+          about:
+        </h2>
+      </Fade>
+      <Fade>
+        <div className='chartContainer'>
+          <Charts
+            title='Stuff I care about'
+            dataset={dataset}
+            propOptions={{ hidden: ['proficiency'] }}
+          />
         </div>
-      ) : (
-        <></>
-      )}
+      </Fade>
     </StyledWrapper>
   );
 }

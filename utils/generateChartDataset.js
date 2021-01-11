@@ -6,7 +6,7 @@ const colors = [
   '255, 84, 0',
 ];
 
-export default function generateChartData(dataset) {
+export default function generateChartData(dataset, propOptions) {
   const output = {
     labels: [],
     datasets: [],
@@ -29,6 +29,7 @@ export default function generateChartData(dataset) {
         }
         output.datasets.push({
           label: key,
+          hidden:  propOptions?.hidden?.includes(key),
           data: arr,
           barPercentage: 1.0,
         });

@@ -1,12 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
+import Fade from 'react-reveal/Fade';
 
 const StyledWrapper = styled.div`
   --columns: auto auto;
-  padding-top: 8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80%;
   margin: auto;
+  min-height: 110vh;
   .header {
     max-width: 700px;
     h2 {
@@ -38,7 +42,7 @@ const StyledWrapper = styled.div`
         width: 4.5rem;
         padding-bottom: 1rem;
         position: relative;
-        top: -.5rem;
+        top: -0.5rem;
       }
       h3 {
         display: inline-block;
@@ -55,6 +59,7 @@ const StyledWrapper = styled.div`
     --columns: 1;
     .header {
       margin: auto;
+      margin: 4rem 0;
       width: 100%;
       max-width: 100%;
       h2 {
@@ -67,10 +72,12 @@ const StyledWrapper = styled.div`
       margin: auto;
       justify-items: center;
       .portrait {
+        --portraitSize: 300px;
         margin-top: 0;
       }
       .text-box {
         padding: 0;
+        margin: 4rem 0;
       }
     }
   }
@@ -79,48 +86,50 @@ const StyledWrapper = styled.div`
 export default function About() {
   return (
     <StyledWrapper>
-      <div className='container'>
-        <div className='header'>
-          <h2>My goal is to become one of</h2>{' '}
-          <h2> the top engineers in the industry.</h2>
-        </div>
-        <div className='second'>
-          <div>
-            <div className='portrait'>
-              <Image
-                src='/assets/images/circleme.png'
-                width='300'
-                height='300'
-                layout='responsive'
-              />
+      <Fade>
+        <div className='container'>
+          <div className='header'>
+            <h2>My goal is to become one of</h2>{' '}
+            <h2> the top engineers in the industry.</h2>
+          </div>
+          <div className='second'>
+            <div>
+              <div className='portrait'>
+                <Image
+                  src='/assets/images/circleme.png'
+                  width='300'
+                  height='300'
+                  layout='responsive'
+                />
+              </div>
+              <div className='arrow'>
+                <Image
+                  src='/assets/images/arrow.png'
+                  width='100'
+                  height='100'
+                  layout='responsive'
+                />
+                <h3>Me thinking about science</h3>
+              </div>
             </div>
-            <div className='arrow'>
-              <Image
-                src='/assets/images/arrow.png'
-                width='100'
-                height='100'
-                layout='responsive'
-              />
-              <h3>Me thinking about science</h3>
+            <div className='text-box'>
+              <p>
+                <strong>
+                  I love to take on challenges and learn as much as a I can.
+                </strong>{' '}
+                I have a strong background in frontend development, and am
+                steadfastly catching the rest of my skills up as well.{' '}
+              </p>
+              <p>
+                I'm familiar with an abundance of technologies, and am able to
+                quickly adapt as needed. I like to work in roles where I am able
+                to make a positive impact whether it's on the lives of
+                consumers, improving developer experiences, etc.
+              </p>
             </div>
           </div>
-          <div className='text-box'>
-            <p>
-              <strong>
-                I love to take on challenges and learn as much as a I can.
-              </strong>{' '}
-              I have a strong background in frontend development, and am
-              steadfastly catching the rest of my skills up as well.{' '}
-            </p>
-            <p>
-              I'm familiar with an abundance of technologies, and am able to
-              quickly adapt as needed. I like to work in roles where I am able
-              to make a positive impact whether it's on the lives of consumers,
-              improving developer experiences, etc.
-            </p>
-          </div>
         </div>
-      </div>
+      </Fade>
     </StyledWrapper>
   );
 }
