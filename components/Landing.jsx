@@ -30,11 +30,10 @@ export default function Landing() {
         </div>
       </div>
       <div className='hero-img'>
-        <Image
-          src='/../public/assets/images/kpop_dude_s.png'
+        <img
+          src='/assets/images/kpop_dude_s.png'
           width='613'
           height='1132'
-          layout='responsive'
         />
       </div>
     </StyledLanding>

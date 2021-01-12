@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
 import Fade from 'react-reveal/Fade';
 
 const StyledWrapper = styled.div`
@@ -95,20 +94,18 @@ export default function About() {
           <div className='second'>
             <div>
               <div className='portrait'>
-                <Image
+                <img
                   src='/assets/images/circleme.png'
                   width='300'
                   height='300'
-                  layout='responsive'
                 />
               </div>
               <Fade left>
                 <div className='arrow'>
-                  <Image
+                  <img
                     src='/assets/images/arrow.png'
                     width='100'
                     height='100'
-                    layout='responsive'
                   />
                   <h3>Me thinking about science</h3>
                 </div>

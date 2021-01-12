@@ -109,7 +109,7 @@ export default function ProjectSlider() {
         <Slider {...settings}>
           <>
             <div className='item'>
-              <Image
+              <img
                 src='/../public/assets/images/bread_stock2.jpg'
                 height='1200px'
                 width='1200px'
@@ -123,7 +123,7 @@ export default function ProjectSlider() {
           </>
           <>
             <div className='item'>
-              <Image
+              <img
                 src='/../public/assets/images/bread_stock2.jpg'
                 height='1200px'
                 width='1200px'
@@ -137,7 +137,7 @@ export default function ProjectSlider() {
           </>
           <>
             <div className='item'>
-              <Image
+              <img
                 src='/../public/assets/images/bread_stock2.jpg'
                 height='1200px'
                 width='1200px'

@@ -38,8 +38,8 @@ const StyledWrapper = styled.div`
     }
   }
   @media (max-width: 500px) {
-    .inner-wrapper{
-      color:var(--grey);
+    .inner-wrapper {
+      color: var(--grey);
     }
   }
   @media (max-width: 1200px) {
@@ -52,7 +52,7 @@ const StyledWrapper = styled.div`
 `;
 
 export default function About() {
-  const {width} = useWindowDimensions();
+  const { width } = useWindowDimensions();
   const fadeRight = width > 600;
   return (
     <StyledWrapper size={100}>
@@ -62,34 +62,19 @@ export default function About() {
           <div className='image-group'>
             <div>
               <div className='img-container'>
-                <Image
-                  src='/assets/images/merry.png'
-                  width='300'
-                  height='300'
-                  layout='responsive'
-                />
+                <img src='/assets/images/merry.png' width='300' height='300' />
               </div>
               <h5>Merry</h5>
             </div>
             <div>
               <div className='img-container'>
-                <Image
-                  src='/assets/images/kiara.png'
-                  width='300'
-                  height='300'
-                  layout='responsive'
-                />
+                <img src='/assets/images/kiara.png' width='300' height='300' />
                 <h5>Kiara</h5>
               </div>
             </div>
             <div>
               <div className='img-container'>
-                <Image
-                  src='/assets/images/momo.png'
-                  width='300'
-                  height='300'
-                  layout='responsive'
-                />
+                <img src='/assets/images/momo.png' width='300' height='300' />
                 <h5>Moo-moo</h5>
               </div>
             </div>

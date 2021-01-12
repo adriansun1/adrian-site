@@ -36,6 +36,11 @@ const GlobalStyles = createGlobalStyle`
     margin:0px;
   }
 
+  img{
+    width:100%;
+    height:100%;
+  }
+
   fieldset {
     border-color: rgba(0,0,0,0.1);
     border-width: 1px;
