@@ -49,9 +49,8 @@ const StyledLanding = styled.div`
       a {
         padding: 0;
         margin: 0;
-        &:hover{
-          transform: scale(1.1)
-
+        &:hover {
+          transform: scale(1.1);
         }
       }
     }
@@ -72,6 +71,22 @@ const StyledLanding = styled.div`
     }
     .title {
       z-index: 3;
+    }
+  }
+  @media (max-width: 540px) {
+    padding:0;
+    .title {
+      h1 {
+        font-size: 20vw;
+      }
+    }
+    .hero-img {
+      width: 100%;
+      max-height:750px;
+      margin: auto;
+      img{
+        object-fit:contain;
+      }
     }
   }
 `;

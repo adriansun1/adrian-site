@@ -7,6 +7,7 @@ const StyledWrapper = styled.ul`
   background: ${({isAbsolute})=>isAbsolute ? '' : 'var(--bgGradient)'};
   list-style-type: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   padding: 1rem 2rem;
   margin: 0;
