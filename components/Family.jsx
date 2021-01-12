@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Image from 'next/image';
 import Fade from 'react-reveal/Fade';
 import useWindowDimensions from '../utils/hooks/useWindowDimensions';
 

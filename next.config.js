@@ -12,5 +12,9 @@ module.exports = {
     GITHUB_URL: process.env.GITHUB_URL,
     EMAIL_URL: process.env.EMAIL_URL,
     LINKEDIN_URL: process.env.LINKEDIN_URL,
+  },
+  images:{
+    loader: 'imgix',
+    path: 'https://example.com/myaccount/',
   }
 };
