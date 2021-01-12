@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import resume from '../public/assets/resume.html';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
@@ -9,7 +8,7 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default function Home() {
+export default function Resume({html}) {
   const ref = useRef(null);
   const [IFHeight, setIFHeight] = useState('0');
   const [IFWidth, setIFWidth] = useState('0');
@@ -37,7 +36,7 @@ export default function Home() {
       <div className='iframe'>
         <iframe
           ref={ref}
-          srcDoc={resume}
+          srcDoc={html}
           height={IFHeight}
           width={IFWidth}
           frameBorder='0'
@@ -47,3 +46,16 @@ export default function Home() {
     </StyledWrapper>
   );
 }
+
+export async function getStaticProps(context) {
+  const res= await fetch('https://d13b2cruxwxefb.cloudfront.net/resume.html');
+  const data = await res.text();
+
+  return {
+    props: {
+      html: data,
+    }, // will be passed to the page component as props
+  }
+}
+
+

@@ -1,7 +1,6 @@
 import React from 'react';
 import Fade from 'react-reveal';
 import styled from 'styled-components';
-import useWindowDimensions from '../utils/hooks/useWindowDimensions';
 
 const StyledWrapper = styled.div`
   h1{
@@ -55,13 +54,11 @@ const StyledWrapper = styled.div`
 `;
 
 export default function Roller() {
-  const {width} = useWindowDimensions();
-  const fadeRight = width > 600;
   return (
     <StyledWrapper>
       <div className='location'>
         <h1>I am a Full-Stack Software Engineer based in:</h1>
-        <Fade right={fadeRight}>
+        <Fade>
         <ul>
           <li>
             <h1>Portland, Oregon</h1>
