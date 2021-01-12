@@ -3,13 +3,15 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
   :root {
     --maroon: #b80003;
-    --black: #22181C2;
+    --black: #22181C;
     --pink: #f87977;
     --white: #fbf5f3;
     --grey: #efefef;
     --darkGrey: #909090;
     --orange: #F5403D;
-    --purple: #856084;
+    --darkBlue:#242582;
+    --blue:#2f2fa2;
+    --purple:#553D67;
     --bgGradient: linear-gradient(
     to bottom right,
     var(--pink),

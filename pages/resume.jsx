@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import resume from './resume.html';
 import styled from 'styled-components';
-import Navbar from '../components/Navbar';
 
 const StyledWrapper = styled.div`
   .iframe {
@@ -31,10 +30,9 @@ export default function Home() {
 
   return (
     <StyledWrapper>
-      <Navbar />
-      <p>export as pdf/ docx</p>
+      {/* <p>export as pdf/ docx</p>
       <p>print me</p>
-      <p>last updated: today</p>
+      <p>last updated: today</p> */}
 
       <div className='iframe'>
         <iframe

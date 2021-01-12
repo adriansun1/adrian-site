@@ -19,22 +19,22 @@ export default function Navbar({isAbsolute}) {
   return (
     <StyledWrapper isAbsolute={isAbsolute}>
       <li>
-        <Link href='/professional'>
+        <Link href='/wip'>
           <a>Professional</a>
         </Link>
       </li>
       <li>
-        <Link href='/projects'>
+        <Link href='/wip'>
           <a>Projects</a>
         </Link>
       </li>
       <li>
-        <Link href='/food'>
+        <Link href='/wip'>
           <a>Food</a>
         </Link>
       </li>
       <li>
-        <Link href='/notes'>
+        <Link href='/wip'>
           <a>Notes</a>
         </Link>
       </li>

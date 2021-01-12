@@ -121,6 +121,11 @@ const StyledWrapper = styled.div`
   height: 100%;
   margin: auto;
   max-width: 1200px;
+  canvas{
+    width:100%;
+    height:100%;
+
+  }
 
   @media (max-width: 1000px) {
     width: 100%;

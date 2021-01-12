@@ -6,7 +6,7 @@ const StyledLanding = styled.div`
   grid-template-columns: repeat(var(--columns), 1fr);
   padding: 0 4rem;
   height: 100vh;
-  min-height:650px;
+  min-height: 650px;
   overflow: hidden;
   background: var(--bgGradient);
   background-attachment: fixed;
@@ -41,11 +41,19 @@ const StyledLanding = styled.div`
       padding-right: 3rem;
       color: var(--white);
     }
-    .links{
-      margin-top:2.5rem;
-      display:flex;
-      flex-direction: column;
+    .links {
+      padding: 0.2rem 4rem;
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 1rem;
+      a {
+        padding: 0;
+        margin: 0;
+        &:hover{
+          transform: scale(1.1)
 
+        }
+      }
     }
   }
   .chevron {

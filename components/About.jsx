@@ -102,15 +102,17 @@ export default function About() {
                   layout='responsive'
                 />
               </div>
-              <div className='arrow'>
-                <Image
-                  src='/assets/images/arrow.png'
-                  width='100'
-                  height='100'
-                  layout='responsive'
-                />
-                <h3>Me thinking about science</h3>
-              </div>
+              <Fade left>
+                <div className='arrow'>
+                  <Image
+                    src='/assets/images/arrow.png'
+                    width='100'
+                    height='100'
+                    layout='responsive'
+                  />
+                  <h3>Me thinking about science</h3>
+                </div>
+              </Fade>
             </div>
             <div className='text-box'>
               <p>

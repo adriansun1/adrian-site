@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Image from 'next/image';
-import Fade from 'react-reveal/Fade'
+import Fade from 'react-reveal/Fade';
+import useWindowDimensions from '../utils/hooks/useWindowDimensions';
 
 const StyledWrapper = styled.div`
   --size: 100px;
@@ -17,21 +18,28 @@ const StyledWrapper = styled.div`
     display: flex;
     gap: 2rem;
     padding-right: 3rem;
-    > div {
-      text-align: center;
+    text-align: center;
+    .img-container {
       width: ${({ size }) => size}px;
       height: ${({ size }) => size}px;
     }
   }
   .inner-wrapper {
+    background: var(--blue);
+    background: linear-gradient(90deg, #00000000, #553d67);
+    padding: 1rem 0;
     position: absolute;
     display: flex;
     align-items: top;
     top: -${({ size }) => size + 50}px;
     right: 0;
     > h3 {
-      padding-top: 0.5rem;
       padding-right: 2rem;
+    }
+  }
+  @media (max-width: 500px) {
+    .inner-wrapper{
+      color:var(--grey);
     }
   }
   @media (max-width: 1200px) {
@@ -44,41 +52,49 @@ const StyledWrapper = styled.div`
 `;
 
 export default function About() {
+  const {width} = useWindowDimensions();
+  const fadeRight = width > 600;
   return (
     <StyledWrapper size={100}>
       <div className='inner-wrapper'>
-        <h3>with the family:</h3>
-        <Fade right>
-        <div className='image-group'>
-          <div>
-            <Image
-              src='/assets/images/merry.png'
-              width='300'
-              height='300'
-              layout='responsive'
-            />
-            <h5>Merry</h5>
+        <Fade right={fadeRight}>
+          <h3>with the family:</h3>
+          <div className='image-group'>
+            <div>
+              <div className='img-container'>
+                <Image
+                  src='/assets/images/merry.png'
+                  width='300'
+                  height='300'
+                  layout='responsive'
+                />
+              </div>
+              <h5>Merry</h5>
+            </div>
+            <div>
+              <div className='img-container'>
+                <Image
+                  src='/assets/images/kiara.png'
+                  width='300'
+                  height='300'
+                  layout='responsive'
+                />
+                <h5>Kiara</h5>
+              </div>
+            </div>
+            <div>
+              <div className='img-container'>
+                <Image
+                  src='/assets/images/momo.png'
+                  width='300'
+                  height='300'
+                  layout='responsive'
+                />
+                <h5>Moo-moo</h5>
+              </div>
+            </div>
           </div>
-          <div>
-            <Image
-              src='/assets/images/kiara.png'
-              width='300'
-              height='300'
-              layout='responsive'
-            />
-            <h5>Kiara</h5>
-          </div>
-          <div>
-            <Image
-              src='/assets/images/momo.png'
-              width='300'
-              height='300'
-              layout='responsive'
-            />
-            <h5>Moo-moo</h5>
-          </div>
-        </div>
-</Fade>
+        </Fade>
       </div>
     </StyledWrapper>
   );

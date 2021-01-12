@@ -52,13 +52,13 @@ const dataset = [
 ];
 
 const StyledWrapper = styled.div`
-  position: relative;
-  margin-top: 1rem;
-  height: 100vh;
-  min-height: 750px;
+  display: flex;
+  flex-direction: column;
+  min-height: 110vh;
   max-width: 80%;
   margin: auto;
   h2 {
+    margin-top: 5rem;
     font-weight: 300;
     padding: 0;
     padding-top: 3rem;
@@ -71,8 +71,9 @@ const StyledWrapper = styled.div`
     align-items: center;
     transition: all 2s;
   }
-  @media (max-width: 1000px) {
-    margin-top: 10rem;
+  @media (max-width: 500px) {
+    min-height: 1000px;
+    margin-top: 5rem;
   }
 `;
 
