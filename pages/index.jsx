@@ -37,7 +37,7 @@ export default function Home() {
         <div className='content'>
           <h2>Recipe Aggregator</h2>
           <p>
-            Solving for a problem that I encounter in my daily life. This app
+            Solves for a problem that I encounter in my daily life. This app
             aggregates recipes from provided urls, and then creates a shopping
             list from the ingredients contained within each page. I estimate
             that i will save 20 seconds off every week. I should be able to make
