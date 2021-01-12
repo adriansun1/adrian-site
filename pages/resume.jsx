@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import resume from './resume.html';
+import resume from '../public/assets/resume.html';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`

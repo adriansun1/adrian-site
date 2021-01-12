@@ -60,13 +60,13 @@ const StyledLanding = styled.div`
     width: 4rem;
     height: 4rem;
   }
-  @media (max-width: 950px) {
+  @media (max-width: 1150px) {
     --columns: 1;
     .hero-img {
       position: absolute;
       left: 0;
       right: 0;
-      bottom: 0;
+      bottom: -8px;
       min-width: 330px;
     }
     .title {
@@ -81,12 +81,8 @@ const StyledLanding = styled.div`
       }
     }
     .hero-img {
-      width: 100%;
-      max-height:750px;
+      width: 70%;
       margin: auto;
-      img{
-        object-fit:contain;
-      }
     }
   }
 `;
