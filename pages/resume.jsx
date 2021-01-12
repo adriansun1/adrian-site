@@ -36,6 +36,7 @@ export default function Resume({html}) {
       <div className='iframe'>
         <iframe
           ref={ref}
+          src='https://d13b2cruxwxefb.cloudfront.net/resume.html'
           srcDoc={html}
           height={IFHeight}
           width={IFWidth}
@@ -45,17 +46,6 @@ export default function Resume({html}) {
       </div>
     </StyledWrapper>
   );
-}
-
-export async function getStaticProps(context) {
-  const res= await fetch('https://d13b2cruxwxefb.cloudfront.net/resume.html');
-  const data = await res.text();
-
-  return {
-    props: {
-      html: data,
-    }, // will be passed to the page component as props
-  }
 }
 
 
