@@ -18,11 +18,6 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <style>
-          @import
-          url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200&family=Roboto:wght@100;300&family=Source+Code+Pro:wght@200&family=Source+Sans+Pro:wght@200&family=Titillium+Web:wght@200&family=Work+Sans:wght@100;200&display=swap');
-        </style>
-
         <Head>
           {this.props.styleTags}
         </Head>

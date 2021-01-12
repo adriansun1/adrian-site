@@ -9,7 +9,7 @@ const StyledWrapper = styled.div`
   align-items: center;
 `;
 
-export default function About() {
+export default function Wip() {
   return (
     <StyledWrapper>
       <h1>Doesnt exist yet</h1>

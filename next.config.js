@@ -9,9 +9,9 @@ module.exports = {
     return config;
   },
   env: {
-    GITHUB_URL: process.env.GITHUB_URL,
-    EMAIL_URL: process.env.EMAIL_URL,
-    LINKEDIN_URL: process.env.LINKEDIN_URL,
+    GITHUB_URL: process.env.NEXT_PUBLIC_GITHUB_URL,
+    EMAIL_URL: process.env.NEXT_PUBLIC_EMAIL_URL,
+    LINKEDIN_URL: process.env.NEXT_PUBLIC_LINKEDIN_URL,
   },
   images:{
     loader: 'imgix',

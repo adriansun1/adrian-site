@@ -18,12 +18,12 @@ export default function Landing() {
                 <IoIosPaper size={logoSize} />
               </a>
             </Link>
-            <Link href='https://github.com/adriansun1'>
+            <Link href={process.env.GITHUB_URL}>
               <a>
                 <IoLogoGithub size={logoSize} />
               </a>
             </Link>
-            <Link href='https://www.linkedin.com/in/adrian-sun/'>
+            <Link href={process.env.LINKEDIN_URL}>
               <a>
                 <IoLogoLinkedin size={logoSize} />
               </a>

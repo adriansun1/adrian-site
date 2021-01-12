@@ -50,7 +50,7 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default function About() {
+export default function Family() {
   const { width } = useWindowDimensions();
   const fadeRight = width > 600;
   return (

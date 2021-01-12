@@ -11,7 +11,7 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default function About() {
+export default function Footer() {
   return (
     <StyledWrapper>
       <p>© {new Date().getFullYear()} Adrian Sun</p>
