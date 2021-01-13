@@ -27,12 +27,12 @@ export default function Home() {
   return (
     <div>
       <Navbar isAbsolute />
-      <Landing />
+      {/* <Landing />
       <Roller />
       <Family />
-      <About />
+      <About /> */}
       {/* <InterestChart /> */}
-      <StyledWrapper>
+      {/* <StyledWrapper>
         <h2>Since you're here, why not check out some projects?</h2>
         <div className='content'>
           <h2>Recipe Aggregator</h2>
@@ -59,9 +59,9 @@ export default function Home() {
             dumbbell and barbell lifts.
           </p>
         </div>
-      </StyledWrapper> 
+      </StyledWrapper>
       <Contact />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
