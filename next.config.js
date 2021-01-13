@@ -13,9 +13,5 @@ module.exports = {
     EMAIL_URL: process.env.NEXT_PUBLIC_EMAIL_URL,
     LINKEDIN_URL: process.env.NEXT_PUBLIC_LINKEDIN_URL,
   },
-  images: {
-    loader: 'imgix',
-    path: 'https://example.com/myaccount/',
-  },
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'https://www.adriansun.com' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? 'www.adriansun.com' : '',
 };
