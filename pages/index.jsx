@@ -32,7 +32,7 @@ export default function Home() {
       <Family />
       <About />
       <InterestChart />
-      {/* <StyledWrapper>
+      <StyledWrapper>
         <h2>Since you're here, why not check out some projects?</h2>
         <div className='content'>
           <h2>Recipe Aggregator</h2>
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
       </StyledWrapper>
       <Contact />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
