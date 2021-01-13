@@ -7,7 +7,6 @@ import Roller from '../components/Roller';
 import Family from '../components/Family';
 import Footer from '../components/Footer';
 import Contact from '../components/Contact';
-import {BiErrorAlt} from 'react-icons/bi'
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -28,7 +27,7 @@ export default function Home() {
   return (
     <div>
       <Navbar isAbsolute />
-      {/* <Landing /> */}
+      <Landing />
       <Roller />
       <Family />
       <About />
@@ -36,7 +35,6 @@ export default function Home() {
       <StyledWrapper>
         <h2>Since you're here, why not check out some projects?</h2>
         <div className='content'>
-          <h1><BiErrorAlt/></h1>
           <h2>Recipe Aggregator</h2>
           <p>
             Solves for a problem that I encounter in my daily life. This app
