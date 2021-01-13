@@ -31,7 +31,7 @@ export default function Home() {
       <Roller />
       <Family />
       <About />
-      <InterestChart />
+      {/* <InterestChart /> */}
       <StyledWrapper>
         <h2>Since you're here, why not check out some projects?</h2>
         <div className='content'>
