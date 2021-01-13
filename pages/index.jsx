@@ -62,7 +62,7 @@ export default function Home() {
           </p>
         </div>
       </StyledWrapper>
-      {/* <Contact /> */}
+      <Contact />
       <Footer />
     </div>
   );

@@ -40,25 +40,25 @@ export default function Contact() {
     <StyledWrapper>
       <h3>Want to reach me for some reason?</h3>
       <h1>
-        <a href={`mailto:${process.env.EMAIL_URL}`}>
+        {/* <a href={`mailto:${process.env.EMAIL_URL}`}>
           {process.env.EMAIL_URL}
-        </a>
+        </a> */}
       </h1>
       <ul>
         <li>
-          <Link href={process.env.LINKEDIN_URL}>
+          {/* <Link href={process.env.LINKEDIN_URL}>
             <a>
               <IoLogoLinkedin />
               <h5>Linkedin</h5>
             </a>
-          </Link>
+          </Link> */}
         </li>
         <li>
-          <Link href={process.env.GITHUB_URL}>
+          {/* <Link href={process.env.GITHUB_URL}>
             <a>
               <IoLogoGithub /> <h5>Github</h5>
             </a>
-          </Link>
+          </Link> */}
         </li>
       </ul>
     </StyledWrapper>
