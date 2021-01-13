@@ -27,10 +27,10 @@ export default function Home() {
   return (
     <div>
       <Navbar isAbsolute />
-      <Landing />
-      {/* <Roller />
+      {/* <Landing /> */}
+      <Roller />
       <Family />
-      <About /> */}
+      <About />
       {/* <InterestChart /> */}
       {/* <StyledWrapper>
         <h2>Since you're here, why not check out some projects?</h2>
