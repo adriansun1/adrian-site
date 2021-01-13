@@ -16,7 +16,7 @@ const StyledWrapper = styled.div`
     li {
       list-style-type: none;
       a {
-        text-decoration:none;
+        text-decoration: none;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -26,12 +26,10 @@ const StyledWrapper = styled.div`
       }
     }
   }
-  @media(max-width:600px){
-    h1{
-      font-size:8vw;
-
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 8vw;
     }
-
   }
 `;
 
@@ -40,25 +38,23 @@ export default function Contact() {
     <StyledWrapper>
       <h3>Want to reach me for some reason?</h3>
       <h1>
-        {/* <a href={`mailto:${process.env.EMAIL_URL}`}>
-          {process.env.EMAIL_URL}
-        </a> */}
+        <a href={`mailto:adrian@adriansun.com`}>adrian@adriansun.com</a>
       </h1>
       <ul>
         <li>
-          {/* <Link href={process.env.LINKEDIN_URL}>
+          <Link href='https://www.linkedin.com/in/adrian-sun/'>
             <a>
               <IoLogoLinkedin />
               <h5>Linkedin</h5>
             </a>
-          </Link> */}
+          </Link>
         </li>
         <li>
-          {/* <Link href={process.env.GITHUB_URL}>
+          <Link href='https://github.com/adriansun1'>
             <a>
               <IoLogoGithub /> <h5>Github</h5>
             </a>
-          </Link> */}
+          </Link>
         </li>
       </ul>
     </StyledWrapper>
