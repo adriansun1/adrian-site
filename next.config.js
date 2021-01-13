@@ -13,5 +13,4 @@ module.exports = {
     EMAIL_URL: process.env.NEXT_PUBLIC_EMAIL_URL,
     LINKEDIN_URL: process.env.NEXT_PUBLIC_LINKEDIN_URL,
   },
-  assetPrefix: process.env.NODE_ENV === 'production' ? 'www.adriansun.com' : '',
 };
