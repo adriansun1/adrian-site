@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io';
 
 const StyledWrapper = styled.div`
   gap:2rem;

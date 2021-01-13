@@ -63,7 +63,7 @@ export default function Home() {
         </div>
       </StyledWrapper>
       {/* <Contact /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
