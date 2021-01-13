@@ -27,8 +27,8 @@ export default function Home() {
   return (
     <div>
       <Navbar isAbsolute />
-      {/* <Landing />
-      <Roller />
+      <Landing />
+      {/* <Roller />
       <Family />
       <About /> */}
       {/* <InterestChart /> */}
