@@ -61,19 +61,19 @@ export default function Family() {
           <div className='image-group'>
             <div>
               <div className='img-container'>
-                <img src='/assets/images/merry.png' width='300' height='300' />
+                <img src='./assets/images/merry.png' width='300' height='300' />
               </div>
               <h5>Merry</h5>
             </div>
             <div>
               <div className='img-container'>
-                <img src='/assets/images/kiara.png' width='300' height='300' />
+                <img src='./assets/images/kiara.png' width='300' height='300' />
                 <h5>Kiara</h5>
               </div>
             </div>
             <div>
               <div className='img-container'>
-                <img src='/assets/images/momo.png' width='300' height='300' />
+                <img src='./assets/images/momo.png' width='300' height='300' />
                 <h5>Moo-moo</h5>
               </div>
             </div>

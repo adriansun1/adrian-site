@@ -95,7 +95,7 @@ export default function About() {
             <div>
               <div className='portrait'>
                 <img
-                  src='/assets/images/circleme.png'
+                  src='./assets/images/circleme.png'
                   width='300'
                   height='300'
                 />
@@ -103,7 +103,7 @@ export default function About() {
               <Fade left>
                 <div className='arrow'>
                   <img
-                    src='/assets/images/arrow.png'
+                    src='./assets/images/arrow.png'
                     width='100'
                     height='100'
                   />

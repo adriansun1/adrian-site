@@ -32,7 +32,7 @@ export default function Landing() {
         </Fade>
       </div>
       <div className='hero-img'>
-        <img src='/assets/images/kpop_dude_s.png' width='613' height='1132' />
+        <img src='./assets/images/kpop_dude_s.png' width='613' height='1132' />
       </div>
     </StyledLanding>
   );
