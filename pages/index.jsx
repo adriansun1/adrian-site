@@ -26,7 +26,7 @@ const StyledWrapper = styled.div`
 export default function Home() {
   return (
     <div>
-      <Navbar isAbsolute />
+      {/* <Navbar isAbsolute />
       <Landing />
       <Roller />
       <Family />
@@ -59,7 +59,7 @@ export default function Home() {
             dumbbell and barbell lifts.
           </p>
         </div>
-      </StyledWrapper>
+      </StyledWrapper> */}
       <Contact />
       <Footer />
     </div>
