@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import StyledLanding from '../styles/StyledLanding';
 import { IoLogoLinkedin, IoLogoGithub, IoIosPaper } from 'react-icons/io';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 
 export default function Landing() {
   const logoSize = '4rem';

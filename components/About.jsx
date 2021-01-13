@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 
 const StyledWrapper = styled.div`
   --columns: auto auto;
@@ -32,6 +32,7 @@ const StyledWrapper = styled.div`
       height: var(--portraitSize);
       margin-top: -30px;
       img {
+        position: relative;
         z-index: -1;
       }
     }
@@ -100,7 +101,7 @@ export default function About() {
                   height='300'
                 />
               </div>
-              <Fade left>
+              <Fade direction='left'>
                 <div className='arrow'>
                   <img
                     src='./assets/images/arrow.png'

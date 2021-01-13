@@ -1,7 +1,7 @@
 import React from 'react';
 import Charts from './Charts';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 
 const dataset = [
   {

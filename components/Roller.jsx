@@ -1,10 +1,10 @@
 import React from 'react';
-import Fade from 'react-reveal';
+import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
 
 const StyledWrapper = styled.div`
-  h1{
-    margin:1rem 0.5rem;
+  h1 {
+    margin: 1rem 0.5rem;
   }
   .location {
     padding-top: 10vh;
@@ -37,7 +37,7 @@ const StyledWrapper = styled.div`
       padding-top: 5vh;
       padding-right: 3rem;
       h1 {
-        margin:0;
+        margin: 0;
         text-align: right;
         max-width: 500px;
       }
@@ -59,14 +59,14 @@ export default function Roller() {
       <div className='location'>
         <h1>I am a Full-Stack Software Engineer based in:</h1>
         <Fade>
-        <ul>
-          <li>
-            <h1>Portland, Oregon</h1>
-          </li>
-          <li className='strike'>
-            <h1>Los Angeles, CA</h1>
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <h1>Portland, Oregon</h1>
+            </li>
+            <li className='strike'>
+              <h1>Los Angeles, CA</h1>
+            </li>
+          </ul>
         </Fade>
       </div>
     </StyledWrapper>

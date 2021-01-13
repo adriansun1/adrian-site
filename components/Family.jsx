@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 import useWindowDimensions from '../utils/hooks/useWindowDimensions';
 
 const StyledWrapper = styled.div`
@@ -56,7 +56,7 @@ export default function Family() {
   return (
     <StyledWrapper size={100}>
       <div className='inner-wrapper'>
-        <Fade right={fadeRight}>
+        <Fade direction='right'>
           <h3>with the family:</h3>
           <div className='image-group'>
             <div>
