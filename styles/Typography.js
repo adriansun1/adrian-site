@@ -14,6 +14,21 @@ const Typography = createGlobalStyle`
     font-weight: 200;
     margin: 0;
   }
+  @media(max-width:600px){
+    h1{
+      font-size: 3rem;
+    }
+    h2{
+      font-size:2.5rem;
+    }
+    h2{
+      font-size:2rem;
+    }
+    p{
+      font-size:medium;
+    }
+
+  }
   a {
     color: var(--black);
     text-decoration-color: var(--red);
