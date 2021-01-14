@@ -41,7 +41,7 @@ export default function ProjectDescription() {
 
           <h2>Bars to bells</h2>
           <p>
-            Does basic Barbell to dumbell conversions as well as other weight
+            Does Barbell to dumbell conversions as well as other weight
             training related conversions. Useful to compare progress between
             dumbbell and barbell lifts.
           </p>
