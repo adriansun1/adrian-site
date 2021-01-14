@@ -41,7 +41,7 @@ const StyledWrapper = styled.div`
       color: var(--grey);
     }
   }
-  @media (max-width: 800px) {
+  @media (max-width: 1050px) {
     .inner-wrapper {
       flex-direction: column;
       align-items: flex-end;

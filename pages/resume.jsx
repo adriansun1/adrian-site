@@ -1,51 +1,37 @@
 import React, { useEffect, useRef, useState } from 'react';
 import styled from 'styled-components';
+import useWindowDimensions from '../utils/hooks/useWindowDimensions';
+import Navbar from '../components/Navbar';
 
 const StyledWrapper = styled.div`
-  .iframe {
+  width: 100%;
+  height: 100%;
+  .iframe-container {
+    padding: 3rem;
     display: flex;
     justify-content: center;
   }
 `;
 
-export default function Resume({html}) {
+export default function Resume() {
   const ref = useRef(null);
-  const [IFHeight, setIFHeight] = useState('0');
-  const [IFWidth, setIFWidth] = useState('0');
-
-  useEffect(() => {
-    setIframe();
-  });
-
-  function setIframe() {
-    try {
-      const body = ref.current.contentWindow.document.body;
-      setIFHeight(body.scrollHeight | 200);
-      setIFWidth(body.scrollWidth | 700);
-    } catch (e) {
-      console.log(e);
-    }
-  }
+  const { width, height } = useWindowDimensions();
 
   return (
     <StyledWrapper>
+      <Navbar hasHome/>
       {/* <p>export as pdf/ docx</p>
       <p>print me</p>
       <p>last updated: today</p> */}
 
-      <div className='iframe'>
+      <div className='iframe-container' ref={ref}>
         <iframe
-          ref={ref}
           src='https://d13b2cruxwxefb.cloudfront.net/resume.html'
-          srcDoc={html}
-          height={IFHeight}
-          width={IFWidth}
+          height={height}
+          width={width}
           frameBorder='0'
-          onLoad={setIframe}
         />
       </div>
     </StyledWrapper>
   );
 }
-
-

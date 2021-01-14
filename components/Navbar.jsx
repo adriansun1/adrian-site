@@ -13,7 +13,7 @@ const StyledWrapper = styled.div`
   align-items: center;
   z-index: 9999;
   padding-left: 1rem;
-  padding-top:0.5rem;
+  padding-top: 0.5rem;
   transition: all 1s;
   ul {
     margin: 0;
@@ -31,28 +31,35 @@ const StyledWrapper = styled.div`
       color: var(--white);
     }
   }
-  .circle{
-    border-radius:100px;
+  .circle {
+    border-radius: 100px;
   }
 `;
 
-export default function Navbar({ isAbsolute }) {
+export default function Navbar({ hasHome }) {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <StyledWrapper isOpen={isOpen} isAbsolute={isAbsolute}>
+    <StyledWrapper isOpen={isOpen}>
       <div className='circle'>
         <Hamburger
           direction='right'
-          color={isOpen ? 'white':'#553D67'}
+          color={isOpen ? 'white' : '#553D67'}
           toggled={isOpen}
           rounded
           toggle={setIsOpen}
-          label="Show menu" 
+          label='Show menu'
         />
       </div>
       {isOpen ? (
         <Fade direction='right' cascade damping={0.2} triggerOnce>
           <ul>
+            {hasHome ? (
+              <li>
+                <Link href='/'>
+                  <a>Home</a>
+                </Link>
+              </li>
+            ): <></>}
             <li>
               <Link href='/wip'>
                 <a>Professional</a>
