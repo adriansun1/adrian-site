@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 const Typography = createGlobalStyle`
 
   html {
-    font-family: 'Titillium Web';
+    font-family: 'Titillium Web', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color: var(--black);
   }
   p, li {
