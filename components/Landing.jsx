@@ -18,16 +18,20 @@ export default function Landing() {
                 <IoIosPaper size={logoSize} />
               </a>
             </Link>
-            <Link href='https://github.com/adriansun1'>
-              <a>
-                <IoLogoGithub size={logoSize} />
-              </a>
-            </Link>
-            <Link href='https://www.linkedin.com/in/adrian-sun/'>
-              <a>
-                <IoLogoLinkedin size={logoSize} />
-              </a>
-            </Link>
+            <a
+              href='https://github.com/adriansun1'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <IoLogoGithub size={logoSize} />
+            </a>
+            <a
+              href='https://www.linkedin.com/in/adrian-sun/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              <IoLogoLinkedin size={logoSize} />
+            </a>
           </div>
         </AttentionSeeker>
       </div>

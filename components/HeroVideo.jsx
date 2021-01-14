@@ -33,7 +33,7 @@ const StyledVideo = styled.div`
 export default function HeroVideo() {
   return (
     <StyledVideo>
-      <div class='videoContainer'>
+      <div className='videoContainer'>
         <iframe
           width='100%'
           height='100%'

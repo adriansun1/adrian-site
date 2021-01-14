@@ -42,19 +42,23 @@ export default function Contact() {
       </h1>
       <ul>
         <li>
-          <Link href='https://www.linkedin.com/in/adrian-sun/'>
-            <a>
-              <IoLogoLinkedin />
-              <h5>Linkedin</h5>
-            </a>
-          </Link>
+          <a
+            href='https://www.linkedin.com/in/adrian-sun/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <IoLogoLinkedin />
+            <h5>Linkedin</h5>
+          </a>
         </li>
         <li>
-          <Link href='https://github.com/adriansun1'>
-            <a>
-              <IoLogoGithub /> <h5>Github</h5>
-            </a>
-          </Link>
+          <a
+            href='https://github.com/adriansun1'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <IoLogoGithub /> <h5>Github</h5>
+          </a>
         </li>
       </ul>
     </StyledWrapper>
