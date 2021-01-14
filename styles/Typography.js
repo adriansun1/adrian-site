@@ -1,17 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
-import './Fonts.module.css';
 
 const Typography = createGlobalStyle`
 
-  // font-family: 'Raleway', sans-serif;
-  // font-family: 'Roboto', sans-serif;
-  // font-family: 'Source Code Pro', monospace;
-  // font-family: 'Source Sans Pro', sans-serif;
-  // font-family: 'Titillium Web', sans-serif;
-  // font-family: 'Work Sans', sans-serif;
-
   html {
-    // font-family: 'Source Code Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-family: 'Titillium Web';
     color: var(--black);
   }
