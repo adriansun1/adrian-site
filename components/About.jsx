@@ -78,6 +78,19 @@ const StyledWrapper = styled.div`
       .text-box {
         padding: 0;
         margin: 4rem 0;
+        font-size:2rem;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .second{
+      .arrow{
+        h3{
+          font-size:2rem;
+        }
+      }
+      .text-box{
+        font-size:medium;
       }
     }
   }
