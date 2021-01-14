@@ -86,7 +86,7 @@ const StyledWrapper = styled.div`
 export default function About() {
   return (
     <StyledWrapper>
-      <Fade>
+      <Fade triggerOnce>
         <div className='container'>
           <div className='header'>
             <h2>My goal is to become one of</h2>{' '}
@@ -101,7 +101,7 @@ export default function About() {
                   height='300'
                 />
               </div>
-              <Fade direction='left'>
+              <Fade direction='left' triggerOnce>
                 <div className='arrow'>
                   <img
                     src='./assets/images/arrow.png'

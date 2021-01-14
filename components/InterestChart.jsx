@@ -54,7 +54,7 @@ const dataset = [
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 110vh;
+  min-height: 100vh;
   max-width: 80%;
   margin: auto;
   h2 {
@@ -72,7 +72,7 @@ const StyledWrapper = styled.div`
     transition: all 2s;
   }
   @media (max-width: 500px) {
-    min-height: 1000px;
+    min-height: 800px;
     margin-top: 5rem;
   }
 `;
@@ -80,13 +80,13 @@ const StyledWrapper = styled.div`
 export default function InterestChart() {
   return (
     <StyledWrapper>
-      <Fade>
+      <Fade triggerOnce>
         <h2>
           This is my personal site, I use it to keep track the stuff I care
           about:
         </h2>
       </Fade>
-      <Fade>
+      <Fade triggerOnce>
         <div className='chartContainer'>
           <Charts
             title='Stuff I care about'

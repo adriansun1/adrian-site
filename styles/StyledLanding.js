@@ -6,7 +6,6 @@ const StyledLanding = styled.div`
   grid-template-columns: repeat(var(--columns), 1fr);
   padding: 0 4rem;
   height: 100vh;
-  min-height: 650px;
   overflow: hidden;
   background: var(--bgGradient);
   background-attachment: fixed;

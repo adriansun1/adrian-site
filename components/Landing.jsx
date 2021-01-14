@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import StyledLanding from '../styles/StyledLanding';
 import { IoLogoLinkedin, IoLogoGithub, IoIosPaper } from 'react-icons/io';
-import { Fade } from 'react-awesome-reveal';
+import { AttentionSeeker } from 'react-awesome-reveal';
 
 export default function Landing() {
   const logoSize = '4rem';
   return (
     <StyledLanding>
       <div className='title'>
-        <Fade>
+        <AttentionSeeker effect='pulse' triggerOnce>
           <h1>ADRIAN</h1>
           <h2>·x·</h2>
           <h1>SUN</h1>
@@ -29,7 +29,7 @@ export default function Landing() {
               </a>
             </Link>
           </div>
-        </Fade>
+        </AttentionSeeker>
       </div>
       <div className='hero-img'>
         <img src='./assets/images/kpop_dude_s.png' width='613' height='1132' />

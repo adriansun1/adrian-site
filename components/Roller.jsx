@@ -58,7 +58,7 @@ export default function Roller() {
     <StyledWrapper>
       <div className='location'>
         <h1>I am a Full-Stack Software Engineer based in:</h1>
-        <Fade>
+        <Fade triggerOnce>
           <ul>
             <li>
               <h1>Portland, Oregon</h1>

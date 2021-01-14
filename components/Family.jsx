@@ -56,7 +56,7 @@ export default function Family() {
   return (
     <StyledWrapper size={100}>
       <div className='inner-wrapper'>
-        <Fade direction='left'>
+        <Fade direction='left' triggerOnce>
           <h3>with the family:</h3>
           <div className='image-group'>
             <div>
