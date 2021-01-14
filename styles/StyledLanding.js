@@ -10,8 +10,9 @@ const StyledLanding = styled.div`
   background: var(--bgGradient);
   background-attachment: fixed;
   .hero-img {
+    margin:auto;
+    margin-bottom:0;
     width: 35vw;
-    margin: auto;
   }
   .title {
     --spacing: 1.5rem;
@@ -66,7 +67,8 @@ const StyledLanding = styled.div`
       left: 0;
       right: 0;
       bottom: -8px;
-      min-width: 330px;
+      width: 40vw;
+      min-width: 350px;
     }
     .title {
       z-index: 3;

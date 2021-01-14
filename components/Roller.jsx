@@ -49,7 +49,7 @@ const StyledWrapper = styled.div`
     background-position: -300px 0px;
   }
   @media (max-width: 400px) {
-    background-position: -350px 0px;
+    background-position: -375px 0px;
   }
 `;
 
