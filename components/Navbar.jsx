@@ -6,15 +6,25 @@ import { Fade } from 'react-awesome-reveal';
 
 const StyledWrapper = styled.div`
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
   background: ${(props) => (props.isOpen ? 'rgba(0, 0, 0, 0.5)' : 'none')};
   display: flex;
   align-items: center;
   z-index: 9999;
-  padding-left: 1rem;
-  padding-top: 0.5rem;
+  padding-left: 0.5rem;
+  padding-top: 0.25rem;
   transition: all 1s;
+  .burg {
+    display: flex;
+    align-items: center;
+    color: var(--purple);
+    h3 {
+      display: ${(props) => (props.isOpen ? 'none' : '')};
+      cursor: pointer;
+    }
+  }
   ul {
     margin: 0;
     padding: 0;
@@ -36,19 +46,26 @@ const StyledWrapper = styled.div`
   }
 `;
 
-export default function Navbar({ hasHome }) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function Navbar({ hasHome, open }) {
+  const [isOpen, setIsOpen] = useState(open ?? false);
   return (
     <StyledWrapper isOpen={isOpen}>
-      <div className='circle'>
+      <div
+        className='burg'
+        onClick={() => {
+          if (!isOpen) setIsOpen(true);
+        }}
+      >
         <Hamburger
           direction='right'
           color={isOpen ? 'white' : '#553D67'}
           toggled={isOpen}
+          size={25}
           rounded
           toggle={setIsOpen}
           label='Show menu'
         />
+        <h3>Menu</h3>
       </div>
       {isOpen ? (
         <Fade direction='right' cascade damping={0.2} triggerOnce>
@@ -59,19 +76,16 @@ export default function Navbar({ hasHome }) {
                   <a>Home</a>
                 </Link>
               </li>
-            ): <></>}
-            <li>
-              <Link href='/wip'>
-                <a>Professional</a>
-              </Link>
-            </li>
+            ) : (
+              <></>
+            )}
             <li>
               <Link href='/wip'>
                 <a>Projects</a>
               </Link>
             </li>
             <li>
-              <Link href='/wip'>
+              <Link href='/food'>
                 <a>Food</a>
               </Link>
             </li>

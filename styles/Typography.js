@@ -9,6 +9,7 @@ const Typography = createGlobalStyle`
   p, li {
     letter-spacing: 0.5px;
     margin: 1rem 0;
+    font-weight:200;
   }
   h1,h2,h3,h4,h5,h6 {
     font-weight: 200;
@@ -24,10 +25,6 @@ const Typography = createGlobalStyle`
     h2{
       font-size:2rem;
     }
-    p{
-      font-size:medium;
-    }
-
   }
   a {
     color: var(--black);

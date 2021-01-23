@@ -28,7 +28,7 @@ const StyledWrapper = styled.div`
   }
   height: 110vh;
   min-height: 700px;
-  background: url('./assets/images/hiking.png');
+  // background: url('./assets/images/hiking.png');
   background-size: cover;
   background-repeat: no-repeat;
   @media (max-width: 1100px) {

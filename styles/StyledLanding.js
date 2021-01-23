@@ -9,6 +9,7 @@ const StyledLanding = styled.div`
   overflow: hidden;
   background: var(--bgGradient);
   background-attachment: fixed;
+  transition: all .2s;
   .hero-img {
     margin:auto;
     margin-bottom:0;

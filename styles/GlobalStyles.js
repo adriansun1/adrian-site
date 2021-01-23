@@ -15,25 +15,32 @@ const GlobalStyles = createGlobalStyle`
     --bgGradient: linear-gradient(
     to bottom right,
     var(--pink),
-    var(--maroon)
-  );
+    var(--maroon));
+    --shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   }
-
-  html, body{
+  
+  #__next{
     height:100%;
     width:100%;
   }
+
 
   html {
     font-size: 10px;
     padding: 0px;
     margin:0px;
+    scroll-behavior: smooth;
   }
 
   body {
     font-size: 2rem;
     padding: 0px;
     margin:0px;
+  }
+
+  html, body{
+    height:100%;
+    width:100%;
   }
 
   img{
@@ -58,6 +65,11 @@ const GlobalStyles = createGlobalStyle`
       color: var(--black);
       background-color: var(--white);
     }
+  }
+
+  input{
+    width:100%;
+    max-width: 300px;
   }
 
   img {
