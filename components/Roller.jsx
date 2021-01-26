@@ -1,13 +1,19 @@
 import React from 'react';
 import { Fade } from 'react-awesome-reveal';
 import styled from 'styled-components';
+import { PhotoCard, PhotoGrid } from '../components/PhotoCard';
 
 const StyledWrapper = styled.div`
+  height: 100vh;
+  // min-height: 700px;
+  // background: url('./assets/images/hiking.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   h1 {
     margin: 1rem 0.5rem;
   }
   .location {
-    padding-top: 10vh;
+    padding: 5vh 0;
     display: flex;
     justify-content: center;
     ul {
@@ -26,11 +32,18 @@ const StyledWrapper = styled.div`
       opacity: 0.4;
     }
   }
-  height: 110vh;
-  min-height: 700px;
-  // background: url('./assets/images/hiking.png');
-  background-size: cover;
-  background-repeat: no-repeat;
+  .grid {
+    text-align:center;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin: 0 80px;
+    height: 65vh;
+    .grid-item{
+      height:100%;
+    }
+  }
   @media (max-width: 1100px) {
     padding-right: 1rem;
     .location {
@@ -58,7 +71,7 @@ export default function Roller() {
     <StyledWrapper>
       <div className='location'>
         <h1>I am a Full-Stack Software Engineer based in:</h1>
-        <Fade triggerOnce>
+        <Fade delay={800} fraction={1} direction='up' cascade triggerOnce>
           <ul>
             <li>
               <h1>Portland, Oregon</h1>
@@ -69,6 +82,22 @@ export default function Roller() {
           </ul>
         </Fade>
       </div>
+        <div className='grid'>
+          <Fade fraction={.5} delay={1000} damping={.4} cascade triggerOnce>
+          <div className='grid-item'>
+            <h2>With</h2>
+            <PhotoCard title='Kiara' url='./assets/images/tabby-cat-breed.jpg'/>
+          </div>
+          <div className='grid-item'>
+            <h2>The</h2>
+            <PhotoCard title='Merry' url='./assets/images/kpop_blonde.jpg' />
+          </div>
+          <div className='grid-item'>
+            <h2>Family</h2>
+            <PhotoCard title='Moo-moo' url='./assets/images/dog.jpeg' />
+          </div>
+          </Fade>
+        </div>
     </StyledWrapper>
   );
 }

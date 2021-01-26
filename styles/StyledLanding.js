@@ -25,6 +25,7 @@ const StyledLanding = styled.div`
     text-align: center;
     font-weight: 200;
     h1 {
+      text-shadow: var(--shadow);
       letter-spacing: var(--spacing);
       text-indent: var(--spacing);
       margin: 0;

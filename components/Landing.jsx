@@ -3,12 +3,23 @@ import Link from 'next/link';
 import StyledLanding from '../styles/StyledLanding';
 import { IoLogoLinkedin, IoLogoGithub, IoIosPaper } from 'react-icons/io';
 import useWindowDimensions from '../utils/hooks/useWindowDimensions';
+import { useScrollPosition } from '@n8tb1t/use-scroll-position';
 
 export default function Landing() {
   const logoSize = '4rem';
+  const { height, width } = useWindowDimensions();
+  const [opacity, setOpacity] = useState(100);
+
+  useScrollPosition(({ currPos }) => {
+    const val = Math.floor(((height + currPos.y) / height) * 100);
+    if (val > 0) {
+        setOpacity(val);
+    }
+  });
 
   return (
-    <StyledLanding >
+    <div style={{opacity: `${opacity}%`}}>
+    <StyledLanding>
       <div className='title'>
         <h1>ADRIAN</h1>
         <h2>·x·</h2>
@@ -39,5 +50,6 @@ export default function Landing() {
         <img src='./assets/images/kpop_dude_s.png' width='613' height='1132' />
       </div> */}
     </StyledLanding>
+    </div>
   );
 }

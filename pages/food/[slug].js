@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Navbar from '../../components/Navbar';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
+import fetch from 'isomorphic-fetch';
 import { BsStarFill, BsStarHalf, BsStar } from 'react-icons/bs';
 
 const StyledWrapper = styled.div`

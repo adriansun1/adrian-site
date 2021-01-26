@@ -10,32 +10,23 @@ import Contact from '../components/Contact';
 import ProjectDescription from '../components/ProjectDescription';
 
 const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  min-height: 80vh;
-  max-width: 80%;
-  margin: auto;
-  h2 {
-    font-weight: 300;
-    padding: 0;
-  }
+  // scroll-snap-type: mandatory;
+  // scroll-snap-points-y: repeat(100vh);
+  // scroll-snap-type: y mandatory;
 `;
 
 export default function Home() {
   return (
-    <div>
+    <StyledWrapper>
       <Navbar isAbsolute />
       <Landing />
       <Roller />
-      <Family />
-      <About />
+      {/* <Family /> */}
+      {/* <About />
       <InterestChart />
-      <ProjectDescription/>
+      <ProjectDescription/> */}
       <Contact />
       <Footer />
-    </div>
+    </StyledWrapper>
   );
 }

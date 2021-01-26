@@ -104,12 +104,12 @@ const StyledWrapper = styled.div`
 export default function About() {
   return (
     <StyledWrapper>
-      <Fade triggerOnce>
+      <Fade delay={800} triggerOnce>
         <div className='container'>
-          <div className='header'>
+          {/* <div className='header'>
             <h2>My goal is to become one of</h2>{' '}
             <h2> the top engineers in the industry.</h2>
-          </div>
+          </div> */}
           <div className='second'>
             <div>
               <div className='portrait'>
