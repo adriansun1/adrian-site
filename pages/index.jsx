@@ -14,7 +14,7 @@ const StyledWrapper = styled.div``;
 export default function Home() {
   return (
     <StyledWrapper>
-      <Navbar isAbsolute />
+      {/* <Navbar isAbsolute /> */}
       <Landing />
       {/* <Roller />
       <Family /> */}
