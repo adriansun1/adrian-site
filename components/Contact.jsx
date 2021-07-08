@@ -40,27 +40,6 @@ export default function Contact() {
       <h1>
         <a href={`mailto:adrian@adriansun.com`}>adrian@adriansun.com</a>
       </h1>
-      <ul>
-        <li>
-          <a
-            href='https://www.linkedin.com/in/adrian-sun/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <IoLogoLinkedin />
-            <h5>Linkedin</h5>
-          </a>
-        </li>
-        <li>
-          <a
-            href='https://github.com/adriansun1'
-            target='_blank'
-            rel='noreferrer'
-          >
-            <IoLogoGithub /> <h5>Github</h5>
-          </a>
-        </li>
-      </ul>
     </StyledWrapper>
   );
 }

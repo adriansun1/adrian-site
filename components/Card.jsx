@@ -1,6 +1,7 @@
 import React, { Children } from 'react';
 import styled from 'styled-components';
 import { GiStrongMan, GiSandsOfTime } from 'react-icons/gi';
+import Link from 'next/link';
 
 const StyledWrapper = styled.div`
   position: relative;
@@ -42,9 +43,9 @@ const StyledWrapper = styled.div`
     }
   }
   .icons {
-    color:white;
+    color: white;
     svg {
-      padding:2px 5px;
+      padding: 2px 5px;
     }
     > div {
       display: flex;
@@ -70,28 +71,32 @@ const StyledWrapper = styled.div`
 
 export function Card() {
   return (
-    <StyledWrapper>
-      <img src='/assets/images/avotoast.jpeg' alt='avotoast' />
-      <div className='icons'>
-        <div>
-          <GiStrongMan />
-          <p>3/5</p>
-        </div>
-        <div>
-          <GiSandsOfTime />
-          <p>3/5</p>
-        </div>
-      </div>
-      <div className='description'>
-        <h3 className='title'>
-          <strong>Risotto Alla Milanese</strong>
-        </h3>
-        <div className='rating'>
-          <h5>⭐⭐⭐⭐⭐</h5>
-          <p>Japanese</p>
-        </div>
-      </div>
-    </StyledWrapper>
+    <Link href='/food/risotto-alla-milanese'>
+      <a>
+        <StyledWrapper>
+          <img src='/assets/images/avotoast.jpeg' alt='avotoast' />
+          <div className='icons'>
+            <div>
+              <GiStrongMan />
+              <p>3/5</p>
+            </div>
+            <div>
+              <GiSandsOfTime />
+              <p>3/5</p>
+            </div>
+          </div>
+          <div className='description'>
+            <h3 className='title'>
+              <strong>Risotto Alla Milanese</strong>
+            </h3>
+            <div className='rating'>
+              <h5>⭐⭐⭐⭐⭐</h5>
+              <p>Japanese</p>
+            </div>
+          </div>
+        </StyledWrapper>
+      </a>
+    </Link>
   );
 }
 

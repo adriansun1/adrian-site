@@ -10,7 +10,6 @@ const StyledWrapper = styled.div`
   img {
     object-fit: cover;
     transition: all ease 0.5s;
-    filter: blur(3px);
   }
   .description {
     width:100%;
@@ -26,7 +25,7 @@ const StyledWrapper = styled.div`
   }
   &:hover {
     img {
-      filter:blur(0);
+      filter:brightness(100%);
     }
   }
 `;

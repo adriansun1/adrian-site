@@ -19,19 +19,11 @@ export default function Resume() {
 
   return (
     <StyledWrapper>
-      <Navbar hasHome/>
+      <Navbar hasHome />
       {/* <p>export as pdf/ docx</p>
       <p>print me</p>
       <p>last updated: today</p> */}
-
-      <div className='iframe-container' ref={ref}>
-        <iframe
-          src='https://d13b2cruxwxefb.cloudfront.net/resume.html'
-          height={height}
-          width={width}
-          frameBorder='0'
-        />
-      </div>
+      <iframe width='100%' height='100%' srcdoc="<iframe src='https://d13b2cruxwxefb.cloudfront.net/resume.html'></iframe>"></iframe>
     </StyledWrapper>
   );
 }

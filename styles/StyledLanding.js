@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const StyledLanding = styled.div`
-  --columns: 2;
+  --columns: 1;
   display: grid;
   grid-template-columns: repeat(var(--columns), 1fr);
   padding: 0 4rem;

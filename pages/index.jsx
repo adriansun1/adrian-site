@@ -9,19 +9,15 @@ import Footer from '../components/Footer';
 import Contact from '../components/Contact';
 import ProjectDescription from '../components/ProjectDescription';
 
-const StyledWrapper = styled.div`
-  // scroll-snap-type: mandatory;
-  // scroll-snap-points-y: repeat(100vh);
-  // scroll-snap-type: y mandatory;
-`;
+const StyledWrapper = styled.div``;
 
 export default function Home() {
   return (
     <StyledWrapper>
       <Navbar isAbsolute />
       <Landing />
-      <Roller />
-      {/* <Family /> */}
+      {/* <Roller />
+      <Family /> */}
       {/* <About />
       <InterestChart />
       <ProjectDescription/> */}

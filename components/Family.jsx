@@ -2,51 +2,30 @@ import React from 'react';
 import styled from 'styled-components';
 import { Fade } from 'react-awesome-reveal';
 import useWindowDimensions from '../utils/hooks/useWindowDimensions';
+import { PhotoCard } from '../components/PhotoCard';
 
 const StyledWrapper = styled.div`
-  --size: 100px;
-  height: 0px;
-  position: relative;
-  h3 {
-    font-weight: 400;
-  }
-  h5 {
-    font-weight: 300;
-  }
-  .image-group {
-    display: flex;
-    gap: 2rem;
-    padding-right: 3rem;
-    text-align: center;
-    .img-container {
-      width: ${({ size }) => size}px;
-      height: ${({ size }) => size}px;
-    }
-  }
-  .inner-wrapper {
-    background: var(--blue);
-    background: linear-gradient(90deg, #00000000, #553d67);
+  margin-bottom:20rem;
+  .title {
     padding: 1rem 0;
-    position: absolute;
+    padding-right: 5%;
+    text-align: right;
+  }
+  .grid {
+    text-align: center;
+    height: 60vh;
+    gap: 1%;
+    max-width: 1800px;
     display: flex;
-    align-items: top;
-    top: -${({ size }) => size + 50}px;
-    right: 0;
-    > h3 {
-      padding-right: 2rem;
+    margin: 0 5%;
+    > div {
+      flex: 1 1 0;
     }
-  }
-  @media (max-width: 500px) {
-    .inner-wrapper {
-      color: var(--grey);
+    .grid-item {
+      max-width: 60vh;
+      height: 100%;
     }
-  }
-  @media (max-width: 1050px) {
-    .inner-wrapper {
-      flex-direction: column;
-      align-items: flex-end;
-      top: -${({ size }) => size + 100}px;
-    }
+    direction: rtl;
   }
 `;
 
@@ -54,32 +33,26 @@ export default function Family() {
   const { width } = useWindowDimensions();
   const fadeRight = width > 600;
   return (
-    <StyledWrapper size={100}>
-      <div className='inner-wrapper'>
-        <Fade direction='left' triggerOnce>
-          <h3>with the family:</h3>
-          <div className='image-group'>
-            <div>
-              <div className='img-container'>
-                <img src='./assets/images/merry.png' width='100' height='100' />
-              </div>
-              <h5>Merry</h5>
+    <Fade fraction={0.9} triggerOnce>
+      <StyledWrapper>
+        <h1 className='title'>with the family</h1>
+        <div className='grid'>
+          <Fade fraction={0.8} cascade triggerOnce>
+            <div className='grid-item'>
+              <PhotoCard
+                title='Kiara'
+                url='./assets/images/tabby-cat-breed.jpg'
+              />
             </div>
-            <div>
-              <div className='img-container'>
-                <img src='./assets/images/kiara.png' width='100' height='100' />
-                <h5>Kiara</h5>
-              </div>
+            <div className='grid-item pad-1' style={{ paddingTop: '10rem' }}>
+              <PhotoCard title='Merry' url='./assets/images/kpop_blonde.jpg' />
             </div>
-            <div>
-              <div className='img-container'>
-                <img src='./assets/images/momo.png' width='100' height='100' />
-                <h5>Moo-moo</h5>
-              </div>
+            <div className='grid-item pad-2' style={{ paddingTop: '20rem' }}>
+              <PhotoCard title='Moo-moo' url='./assets/images/dog.jpeg' />
             </div>
-          </div>
-        </Fade>
-      </div>
-    </StyledWrapper>
+          </Fade>
+        </div>
+      </StyledWrapper>
+    </Fade>
   );
 }
