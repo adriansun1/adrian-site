@@ -85,11 +85,6 @@ export default function Navbar({ hasHome, open }) {
               </Link>
             </li>
             <li>
-              <Link href='/food'>
-                <a>Food</a>
-              </Link>
-            </li>
-            <li>
               <Link href='/wip'>
                 <a>Notes</a>
               </Link>
