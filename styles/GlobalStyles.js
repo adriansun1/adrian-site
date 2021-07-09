@@ -29,8 +29,6 @@ const GlobalStyles = createGlobalStyle`
     font-size: 10px;
     padding: 0px;
     margin:0px;
-    scroll-snap-type: y proximity;
-    scroll-behavior: smooth;
   }
 
   body {

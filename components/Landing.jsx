@@ -28,7 +28,6 @@ export default function Landing() {
       style={{
         opacity: `${opacity}%`,
         transition: 'opacity .2s',
-        scrollSnapAlign: 'start',
         position: 'relative',
       }}
     >
