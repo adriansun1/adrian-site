@@ -37,18 +37,11 @@ export default function Landing() {
           <h2>·x·</h2>
           <h1>SUN</h1>
           <div className='links'>
-					<Link href='/resume'>
-            <a>
-              <IoIosPaper size={logoSize} />
-            </a>
-          </Link>
-            <a
-              href='https://d13b2cruxwxefb.cloudfront.net/resume.html'
-              target='_blank'
-              rel='noreferrer'
-            >
-              <IoIosPaper size={logoSize} />
-            </a>
+            <Link href='/resume'>
+              <a>
+                <IoIosPaper size={logoSize} />
+              </a>
+            </Link>
             <a
               href='https://github.com/adriansun1'
               target='_blank'
