@@ -2,14 +2,19 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import { FaFilePdf } from 'react-icons/fa';
 import { createGlobalStyle } from 'styled-components';
+import { useRouter } from 'next/router';
 
 const GlobalStyle = createGlobalStyle`
   body {
-    background-color: #222831 ;
+    background-color: #222831;
   }
 `;
 
+const whiteList = ['crypto'];
+
 export default function Resume() {
+  const router = useRouter();
+  console.log(router.query.q);
   const [site, setSite] = useState();
   const url = 'https://d13b2cruxwxefb.cloudfront.net/';
 
@@ -41,25 +46,29 @@ export default function Resume() {
     }
   `;
 
+  function getFilename() {
+    const { q } = router.query;
+    return q && whiteList.includes(q) ? `resume-${q}` : 'resume';
+  }
+
   async function fetchSite() {
     //TODO get diff resume based on path
-    const res = await fetch(`${url}resume.html`);
+    const res = await fetch(`${url}${getFilename()}.html`);
     const data = await res.text();
     setSite(data);
   }
 
   useEffect(() => {
     fetchSite();
-  }, []);
+  }, [router.query.q]);
 
-  console.log(site);
   return (
     <>
       <GlobalStyle />
       <StyledDiv>
         <div className='navbar'>
           <div className='nav' />
-          <a href={url + 'resume.pdf'}>
+          <a href={`${url}${getFilename()}.pdf`}>
             <FaFilePdf />
             <p>PDF</p>
           </a>
