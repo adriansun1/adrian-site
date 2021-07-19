@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import {FaFilePdf} from 'react-icons/fa';
 
 export default function Resume() {
   const [site, setSite] = useState();
@@ -13,6 +14,9 @@ export default function Resume() {
 			position:absolute;
 		}
     a {
+			display:flex;
+			align-items:center;
+			gap:3px;
       position: absolute;
       color: #eeeeee;
       background-color: #ff5701;
@@ -20,7 +24,11 @@ export default function Resume() {
       right: 18px;
       padding: 2px 8px;
       border-radius: 0 0 5px 5px;
-      font-size: 10px;
+      font-size: 12px;
+			p{
+				margin:0;
+				font-weight: 400;
+			}
     }
   `;
 
@@ -40,7 +48,7 @@ export default function Resume() {
     <>
       <StyledDiv>
         <div className='nav'></div>
-        <a href={url + 'resume.pdf'}>PDF</a>
+        <a href={url + 'resume.pdf'}><FaFilePdf/><p>PDF</p></a>
       </StyledDiv>
       <div dangerouslySetInnerHTML={{ __html: site }}></div>
     </>
