@@ -1,15 +1,21 @@
 import React, { useEffect, useState } from 'react';
+import styled from 'styled-components';
 
 export default function Resume() {
-  // useEffect(()=>{
-  // 	if(query){
-  // 		window.location.href=`https://d13b2cruxwxefb.cloudfront.net/resume-${query}.html`;
-  // 	} else {
-  // 		window.location.href='https://d13b2cruxwxefb.cloudfront.net/resume.html';
-  // 	}
-  // })
   const [site, setSite] = useState();
   const url = 'https://d13b2cruxwxefb.cloudfront.net/';
+
+	const StyledDiv = styled.div`
+		position: absolute;
+		color: #EEEEEE;
+		background-color:#FF5701;
+		top: 10px;
+		right: 18px;
+		padding:2px 8px;
+		border-radius: 0 0 5px 5px;
+		font-size:10px;
+
+	`;
 
   async function fetchSite() {
 		//TODO get diff resume based on path
@@ -25,6 +31,9 @@ export default function Resume() {
   console.log(site);
   return (
     <>
+			<StyledDiv>
+				<a href={url+'resume.pdf'}>PDF</a>
+			</StyledDiv>
       <div dangerouslySetInnerHTML={{ __html: site }}></div>
     </>
   );
